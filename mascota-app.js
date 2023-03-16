@@ -1,7 +1,6 @@
 import { v4 as miId } from 'uuid'
-import { mascotaToModel, perroToModel } from './mascotas/mappers/localMascotaToModel'
 import formRaw from './mascotas/Templates/form-mascotas.html?raw'
-import {renderizarMascota} from './mascotas/renders/redner-mascota'
+import { renderizarMascota } from './mascotas/renders/render-mascota'
 
 /**
  * Gestionar los eventos del formulario
@@ -31,7 +30,9 @@ function gestionFormulario(element) {
         id: miId()
       })
 
-    if (element.['tipo-mascota'].value === 'mascota') {
+      
+
+    if (element['tipo-mascota'].value === 'mascota') {
       renderizarMascota(data, 'mascota')
     } else {
       const weight = Number(element.weight.value)
@@ -46,7 +47,7 @@ function gestionFormulario(element) {
 function manipulacionFormulario (element) {
   element.querySelector('#range-age').addEventListener('input', (e) => {
     const input = e.target
-    document.querySelector('#edad').value = input.value
+    document.querySelector('#age').value = input.value
   })
 
   element['tipo-mascota'].addEventListener('change', e => {

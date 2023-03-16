@@ -1,6 +1,7 @@
-import { mascotaToModel, perroToModel } from './mascotas/mappers/localMascotaToModel'
+import { mascotaToModel, perroToModel } from "../mappers/localMascotaToModel"
 
 
+mascotaToModel
 export function renderizarMascota(dataValue, tipo) {
   let mascota = (tipo === 'mascota')
     ? mascotaToModel(dataValue)
@@ -13,3 +14,9 @@ export function renderizarMascota(dataValue, tipo) {
     renderEL.innerHTML += mascota.peso ? `Peso: ${mascota.peso}` :``
 
 }
+
+
+
+
+
+

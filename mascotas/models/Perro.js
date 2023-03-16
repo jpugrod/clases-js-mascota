@@ -30,13 +30,13 @@ export class Perro extends Mascota {
     peso = 0
   }) {
     super({ nombre, sexo, tipo, microchip, edad, id })
-    this.raza = raza,
-    this.alimentacion = alimentacion,
-    this.peso = peso,
+    this.raza = raza
+    this.alimentacion = alimentacion
+    this.peso = peso
 
   }
 
-  getId(){
+  getId() {
 
   }
 

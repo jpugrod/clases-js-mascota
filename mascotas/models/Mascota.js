@@ -18,18 +18,18 @@ export class Mascota {
    * @param {string} Mascota.gender
    */
   constructor({
-    type = 'canido',
-    name = 'Desconocido',
+    tipo = 'canido',
+    nombre = 'Desconocido',
     microchip = '',
-    age = 0,
-    gender = 'f',
+    edad = 0,
+    sexo = 'f',
     id = '' }) {
     this.#id = id
-    this.type = type,
-      this.name = name,
+    this.tipo = tipo,
+      this.nombre = nombre,
       this.microchip = microchip,
-      this.age = age,
-      this.gender = gender
+      this.edad = edad,
+      this.sexo = sexo
   }
   /**
    * Función que permite meter el nombre de la mascota
@@ -53,9 +53,11 @@ export class Mascota {
   }
 
   getData() {
-    return 
-    ...this,
-      id = this.#id
+    return {
+      ...this,
+      id: this.#id
+    }
+   
   }
 
 }

@@ -27,5 +27,5 @@ export function perroToModel (data) {
     race
   } = data
   
-    return new Perro ({ peso: weight, alimentacion: food, raza; race, nombre: name, microchip, edad: age, id, sexo: gender, tipo: type })
+    return new Perro ({ peso: weight, alimentacion: food, raza: race, nombre: name, microchip, edad: age, id, sexo: gender, tipo: type })
   }
