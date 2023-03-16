@@ -1,0 +1,61 @@
+<form id="myForm" class="grid">
+  <fieldset>
+    <article>
+      <select name="tipo-mascota">
+        <option value="mascota">Mascota</option>
+        <option value="perro">Perro</option>
+      </select>
+      <div id="otros-campos" class="grid oculto">
+        <div class="field">
+          <label required for="raza">Raza</label>
+          <input type="text" name="raza" id="raza">
+          <ins>Este campo es obligatorio</ins>
+        </div>
+        <div class="alimentacion">
+          <label required for="alimentacion">Alimentacion</label>
+          <input type="text" name="alimentacion" id="alimentacion">
+        </div>
+        <div class="peso">
+          <label required for="peso">Peso</label>
+          <input type="number" name="peso" id="peso">
+        </div>
+      </div>
+    </article>
+    <div class="grid">
+      <div class="field">
+        <label for="nombre">Nombre</label>
+        <input placeholder="Lyly" required type="text" name="nombre" id="nombre">
+        <ins>Este campo es obligatorio</ins>
+      </div>
+      <div class="field">
+        <label required for="microchip">Microchip</label>
+        <input placeholder="123456789012345" type="text" name="microchip" id="microchip">
+        <ins>Este campo es obligatorio</ins>
+      </div>
+    </div>
+    <div class="field">
+      <label for="tipo">Tipo</label>
+      <input placeholder="tipo" type="text" name="tipo" id="tipo">
+    </div>
+    <div class="grid">
+      <div class="field">
+        <label for="edad">Edad</label>
+        <input placeholder="0" type="number" min="0" max="100" disabled name="edad" id="edad">
+        <input type="range" id="rango-edad" min="0" mas="100" value="0">
+      </div>
+      <div class="field">
+        <legend>Sexo</legend>
+        <label>
+          <input checked type="radio" name="genero" value="f">
+          Hembra
+        </label>
+        <label>
+          <input type="radio" name="genero" value="m">
+          Macho
+        </label>
+      </div>
+    </div>
+    <button>Nueva mascota</button>
+  </fieldset>
+  <div id="content"></div>
+</form>
